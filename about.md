@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Another minimal style of Jekyll theme for writers.
+Hi, This is Lee Hyeonjae, a undergraduate student majoring software in SKKU, South Korea.
