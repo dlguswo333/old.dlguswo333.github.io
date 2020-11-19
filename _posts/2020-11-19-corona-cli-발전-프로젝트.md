@@ -17,9 +17,9 @@ author:
 
 ### 1. corona-cli란?
 
-corona-cli에 대한 설명은 해당 블로그에 있는 포스트를 참조해 주시기 바랍니다.  
+corona-cli에 대한 설명은 해당 블로그에 있는 밑의 포스트를 참조해 주시기 바랍니다.  
 
-[corona-cli 설명](/_posts/2020-11-16-corona-cli-설명.html)
+[corona-cli 설명 포스트](https://dlguswo333.github.io/corona-cli/2020/11/16/corona-cli-설명.html)
 <br>
 
 [corona-cli Github Repository Link](https://github.com/ahmadawais/corona-cli)
