@@ -1,7 +1,7 @@
 title: dlguswo333's Blog
 description: 이현재의 블로그
 author: 이현재
-avatar: /img/logo.png
+avatar: https://github.com/dlguswo333.png
 email: dlguswo333@skku.edu
 
 plugins:
@@ -29,7 +29,7 @@ exclude:
 
 # Jekyll SEO Tag (Optional)
 # =========================
-logo: /img/logo.png
+logo: https://github.com/dlguswo333.png
 social:
   name: 이현재, Lee Hyeonjae
   links:
