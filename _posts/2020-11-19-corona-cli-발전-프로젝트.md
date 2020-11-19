@@ -36,7 +36,7 @@ COVID-19, 코로나 바이러스로 일컫어지는 바이러스는 2020년 연�
 또한 **corona-cli**는 CLI 상에서 동작하는 것이 인상 깊었습니다. GUI 일반 사용자 환경에서도, 심지어 서버용 OS 환경에서도, CLI 쉘만 있다면 언제 어디서든 **corona-cli**가 제공하는 모든 기능을 이용할 수 있습니다.
 <br>
 
-![corona-cli-ex3.png](/img/lhj_01.png)
+![corona-cli-ex3.png](/img/corona-cli-ex3.png)
 <br>
 
 ### 3. corona-cli 진행 사항
