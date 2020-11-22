@@ -23,6 +23,8 @@ author:
 ![corona-cli-ex1.png](/img/corona-cli-ex1.png)
 ![corona-cli-ex2.png](/img/corona-cli-ex2.png)
 
-위와 같이 **corona-cli**는 Bash Shell과 같은 CLI (Character-Line-Interface)상에서도 바형 그래프, 로그 그래프, 테이블과 같은 다양한 형식의 그래프로 보기 좋게 코로나 바이러스 통계를 제공해 줍니다.
+위와 같이 **corona-cli**는 Bash Shell과 같은 CLI (Character-Line-Interface)상에서도 바형 그래프, 로그 그래프, 테이블과 같은 다양한 형식의 그래프로 보기 좋게 코로나 바이러스 통계를 제공해 줍니다.  
 
-제가 포함된 저희 2조는 해당 오픈 소스 소프트웨어를 더욱 좋은 방향으로 발전시키고자 합니다.
+**corona-cli**는 온라인 http 페이지 상에서 제공되는 전세계 국가들의 데이터를 가져와 가공하여 제공하는 형식입니다. 따라서 데이터를 가공하는 코드를 수정 또는 추가함으로써 우리가 원하는 오픈 소스 소프트웨어로 개선할 수 있어 보입니다.  
+
+제가 포함된 저희 2조는 이 오픈 소스 소프트웨어 **corona-cli**를 더욱 좋은 방향으로 발전시키고자 합니다.
