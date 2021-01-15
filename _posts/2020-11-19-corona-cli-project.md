@@ -36,7 +36,7 @@ COVID-19, 코로나 바이러스로 일컫어지는 바이러스는 2020년 연�
 또한 **corona-cli**는 CLI 상에서 동작하는 것이 인상 깊었습니다. GUI 일반 사용자 환경에서도, 심지어 서버용 OS 환경에서도, CLI 쉘만 있다면 언제 어디서든 **corona-cli**가 제공하는 모든 기능을 이용할 수 있습니다.
 <br>
 
-![corona-cli-ex3.png](/img/corona-cli-ex3.png)
+![corona-cli-ex3.png](/img/2020-11-19-cocrona-cli-project/corona-cli-ex3.png)
 <br>
 
 ### 3. corona-cli 진행 사항
@@ -44,11 +44,11 @@ COVID-19, 코로나 바이러스로 일컫어지는 바이러스는 2020년 연�
 그 예로 깃허브의 프로젝트 탭에 이슈로 이루어져 있는 **corona-cli** 발전 프로젝트를 등록해 놓았고 또 다른 추가 이슈들을 등록하고 있습니다.
 <br>
 
-![1119-github-issue.png](/img/1119-github-issue.png)
+![1119-github-issue.png](/img/2020-11-19-cocrona-cli-project/1119-github-issue.png)
 <br>
 
 또한, 저는 **corona-cli**가 국가를 여러 개 입력해도 하나만 테이블에 출력하는 것이 아쉬워 해당 기능을 발전시키려 노력했고 완성해서 만들었던 브랜치에 푸시해 놓았습니다. 해당 브랜치는 테스트 이후 버그가 발견되지 않으면 저희의 master 브랜치에 합칠 계획입니다.
-![1119-multi1.gif](/img/1119-multi1.gif)
+![1119-multi1.gif](/img/2020-11-19-cocrona-cli-project/1119-multi1.gif)
 <br>
 
 ![1119-multi2.gif](/img/1119-multi2.gif)

@@ -20,8 +20,8 @@ author:
 >📈 Charts: Plot statistics in the form of line charts both regular and logarithmic  
 >📟 Sort: cases, cases-today, deaths, deaths-today, recovered, active, critical, per-million  
 
-![corona-cli-ex1.png](/img/corona-cli-ex1.png)
-![corona-cli-ex2.png](/img/corona-cli-ex2.png)
+![corona-cli-ex1.png](/img/2020-11-16-corona-cli-intro/corona-cli-ex1.png)
+![corona-cli-ex2.png](/img/2020-11-16-corona-cli-intro/corona-cli-ex2.png)
 
 위와 같이 **corona-cli**는 Bash Shell과 같은 CLI (Character-Line-Interface)상에서도 바형 그래프, 로그 그래프, 테이블과 같은 다양한 형식의 그래프로 보기 좋게 코로나 바이러스 통계를 제공해 줍니다.  
 
