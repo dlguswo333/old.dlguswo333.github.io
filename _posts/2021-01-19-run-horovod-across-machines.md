@@ -28,7 +28,7 @@ Actually that is how I understand of Docker since I had started using it.
 <br>
 
 Running Horovod inside a container is an easy one. You can just download pre-defined Docker images
-built by someone with kindness(e.g. https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow),
+built by someone with kindness(e.g. <https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow>),
 and run Horovod with argument you like.
 <br>
 
@@ -47,7 +47,11 @@ I had a problem where the Horovod could not find common interface even if there 
 
 I ran Docker containers with the following command:
 ```bash
-docker run --gpus all -it --cap-add sys_admin --cap-add sys_ptrace --security-opt seccomp=unconfined --shm-size=50g --ulimit memlock=-1 --ipc=host -v /data:/data --network host --name docker_name --hostname docker_name nvcr.io/nvidia/tensorflow:20.10-tf1-py3;
+docker run --gpus all -it --cap-add sys_admin \
+    --cap-add sys_ptrace --security-opt seccomp=unconfined \
+    --shm-size=50g --ulimit memlock=-1 --ipc=host -v /data:/data \
+    --network host --name docker_name --hostname docker_name \
+    nvcr.io/nvidia/tensorflow:20.10-tf1-py3;
 ```
 The point is ``--network host``. It means the container can use the host machine's network stack, and the network interfaces are visible to the container. Briefly, the same network is shared between the host and the container.
 This will make ssh communication settings much simpler.
@@ -92,7 +96,8 @@ All docker containers, ssh server settings, port settings are done, and they are
 One example of ``Horovodrun`` is:
 ```bash
 # 2 GPUs in local, 2 GPUs in remote
-horovodrun -np 4 -H localhost:2,123.123.123.123:2 -p 12345 python scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py \
+horovodrun -np 4 -H localhost:2,123.123.123.123:2 -p 12345 \
+    python scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py \
     --model resnet50 \
     --batch_size 16 \
     --variable_update horovod \
