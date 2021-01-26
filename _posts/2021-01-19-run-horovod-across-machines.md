@@ -55,6 +55,9 @@ docker run --gpus all -it --cap-add sys_admin \
 ```
 The point is ``--network host``. It means the container can use the host machine's network stack, and the network interfaces are visible to the container. Briefly, the same network is shared between the host and the container.
 This will make ssh communication settings much simpler.
+I had a few experiments and it seems that you can make ssh connections between containers with ``-p`` argument to proxy between host's port and docker's port,
+but an error would be occured while running Horovod. Yes, it seems not technically explainable, but Horovod does not work with ``-p``.
+Use ``--network host`` instead.
 <br>
 
 ## 2. ssh Settings
