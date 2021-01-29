@@ -22,7 +22,6 @@ This is why you would need Docker, since they can be isolated from outside of th
 and even if something goes wrong, you can just remove the container and install again.
 Moreover, installation does not take too long!
 <br>
-
 Docker is not a virtual machine and but is similar to a virtual machine.
 Actually that is how I understand of Docker since I had started using it.
 <br>
@@ -32,10 +31,10 @@ built by someone with kindness(e.g. <https://ngc.nvidia.com/catalog/containers/n
 and run Horovod with argument you like.
 <br>
 
-However, it is not easy to run Horovod across multiple machines, especially if you run it 
+However, it is not easy to run Horovod across multiple machines or nodes, especially if you run it 
 **inside Docker container** and there are little information on the internet.
 Since I was one who had trouble like above, and even if I still do not understand
-what was the root of the problem, I take a note and leave it here for
+what was the root causes of the problem, I take a note and leave it here for
 someone or for myself. I could finally run Horovod across multiple machines with helps from other people.
 
 ## 1. Run Docker Image
@@ -81,7 +80,7 @@ Install ``openssh-server`` and enable it by ``service ssh start``.
 It is good to make the container automatically restart ssh server service every boot-up.
 <br>
 
-Now the containers are ready to serve as a ssh server. However, there is one more step to do becaus of Docker containers.
+Now the containers are ready to serve as a ssh server. However, there is one more step to do because of Docker containers.
 Default ssh port is 22, and the same thing applies to the host machine.
 It make things tough if every ssh connections are fed into the host's port 22.
 We would better open another port(i.g. 12345) of the host, and use it as a container's ssh server port.
