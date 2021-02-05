@@ -94,6 +94,12 @@ Get inside the container and let us modify the ssh server configuration file ``/
 You may see the line ``#Port 22``. Uncomment the line by deleting ``#`` at the beginning and edit the port number.
 <br>
 
+There is one more thing. You might be stuck after executing the command, seeing no output or error.
+<br>
+This is the result of not adding fingerprint of each machine. Try to ssh every other machine even if you have added
+the public key into them.
+<br>
+
 ## 3. Done!
 All docker containers, ssh server settings, port settings are done, and they are ready to run Horovod.
 One example of ``Horovodrun`` is:
