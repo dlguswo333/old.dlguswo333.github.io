@@ -181,6 +181,7 @@
  */
 .site-body {
   display: grid;
+  border-right: 1px solid;
   grid-template-columns: calc(#{$content-width} * 0.24) 1fr;
   overflow-x: hidden;
   overflow-y: auto;
