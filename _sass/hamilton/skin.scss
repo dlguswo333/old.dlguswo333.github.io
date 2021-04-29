@@ -67,7 +67,9 @@ table {
   border-top-color: $border-color-dark;
   border-bottom-color: $border-color-light;
 }
-
+.site-body{
+  border-color: $border-color-light;
+}
 .site-sidebar {
   border-color: $border-color-light;
 }
