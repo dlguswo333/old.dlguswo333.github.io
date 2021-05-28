@@ -28,6 +28,7 @@ use `grep`, or:
 ```bash
 apt list --installed <package-name>
 ```
+<br>
 
 # du
 `du` is used to show the disk usage of directories and files.<br>
@@ -40,7 +41,8 @@ du -sh .
 ```
 <br>
 
-Show the disk usage of the childs of the current directory.
+Show the disk usage of the childs of the current directory.<br>
+`s` flag summarizes, and `h` flag shows sizes as human readable.<br>
 ```bash
 du -sh *
 ```
@@ -50,6 +52,6 @@ However, the above command does not list hidden files, like `.vimrc`.<br>
 Use the below command to show all including hidden files.<br>
 The pattern `.[^.]*` will take items that start with `.` but not `..*`, which contains a parent directory.<br>
 ```bash
-du -hs .[^.]* *
+du -sh .[^.]* *
 ```
 <br>
