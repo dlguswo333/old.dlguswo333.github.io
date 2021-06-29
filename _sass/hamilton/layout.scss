@@ -343,7 +343,7 @@ ul.social-icons {
 
 // Style scrollbar for Chrome, Safari and Opera
 .site-main::-webkit-scrollbar {
-  display: $scrollbar-width;
+  width: $scrollbar-width;
 }
 .site-main::-webkit-scrollbar-track {
   background-color: #0000;
