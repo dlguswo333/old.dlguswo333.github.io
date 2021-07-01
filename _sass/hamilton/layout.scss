@@ -323,8 +323,8 @@ ul.social-icons {
 .site-main {
   flex: 1 0 auto;
   min-width: 0;
-  border-left: 1px solid;
-  border-right: 1px solid;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   scrollbar-width: $scrollbar-width;     // Firefox
 
   padding-left: $spacing-unit;
@@ -336,6 +336,8 @@ ul.social-icons {
   }
 
   @include media-query($on-small) {
+    border-left: none;
+    border-right: none;
     padding-left: 0;
     padding-right: 0;
   }
