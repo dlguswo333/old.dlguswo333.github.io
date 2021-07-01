@@ -184,7 +184,6 @@
   border-right: 1px solid;
   grid-template-columns: calc(#{$content-width} * 0.24) 1fr;
   overflow-x: hidden;
-  overflow-y: auto;
   
   @include media-query($on-medium) {
     grid-template-columns: calc(#{$content-width} * 0.18) 1fr;
@@ -323,7 +322,6 @@ ul.social-icons {
  */
 .site-main {
   flex: 1 0 auto;
-  overflow-y: scroll;
 
   scrollbar-width: $scrollbar-width;     // Firefox
 
@@ -339,20 +337,6 @@ ul.social-icons {
     padding-left: 0;
     padding-right: 0;
   }
-}
-
-// Style scrollbar for Chrome, Safari and Opera
-.site-main::-webkit-scrollbar {
-  width: $scrollbar-width;
-}
-.site-main::-webkit-scrollbar-track {
-  background-color: #0000;
-}
-.site-main::-webkit-scrollbar-thumb {
-  background-color: #888;
-}
-.site-main::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
 }
 
 /**
