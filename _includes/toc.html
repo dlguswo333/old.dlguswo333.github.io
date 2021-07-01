@@ -85,7 +85,7 @@
         {% assign _classWorkspace = _classWorkspace[1] | split: '"' %}
         {% assign html_class = _classWorkspace[0] %}
 
-        {% if html_class contains "no_toc" %}
+        {% if html_class contains "no_toc" or html_class contains "post-title" %}
             {% continue %}
         {% endif %}
 
