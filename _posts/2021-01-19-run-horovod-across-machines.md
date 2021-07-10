@@ -1,18 +1,18 @@
 ---
 layout: post
 toc: true
-title: "Run Horovod across Multiple Machines"
+title: "Run Horovod across Multiple Machines inside Docker Container"
 categories: milestone
 tags: [Horovod, Docker]
 author:
   - 이현재
 ---
 
-# Run Horovod across Multiple Machines inside docker
-
 If you are trying to do some deep learning, you would want them to run inside a Docker,
 because deep learning frameworks are quite tricky and it is not easy to set the environment at once.
 <br>
+
+<!--break-->
 
 They are sensitive to the run time environment, so you would likely to install them over and over again,
 and the situation could go worse and worse that you cannot go back to the initial environment.
