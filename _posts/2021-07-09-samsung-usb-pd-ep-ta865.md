@@ -37,7 +37,7 @@ USB PD와 PPS, 그리고 최대 65W를 출력한다고 적혀 있습니다.
 <br>
 
 # 4. 충전
-<img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/0.jpg" width="50%" />
+<img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/6.png" width="50%" />
 <br>
 
 보유하고 있는 Lenovo ThinkPad E15 Gen2 AMD 제품에 연결을 해보았습니다.
@@ -53,19 +53,19 @@ USB PD와 PPS, 그리고 최대 65W를 출력한다고 적혀 있습니다.
 엄밀히 말하면 그램은 질량 단위지만 질량은 입에 잘 안 달라 붙으니 무게라 하겠습니다.
 <br>
 
-<img src=https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/3.jpg width="50%" />
+<img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/3.jpg" width="50%" />
 <br>
 
 충전기 본체의 무게는 150g 정도입니다. 재미있는 점이 충전기 크기에 비해 무게가 꽤 나가서 들었을 때 묵직한 감이 있습니다.
 <br>
 
-<img src=https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/4.jpg width="50%" />
+<img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/4.jpg" width="50%" />
 <br>
 
 케이블은 40g으로 측정됩니다.
 <br>
 
-<img src=https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/5.jpg width="50%" />
+<img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/5.jpg" width="50%" />
 <br>
 
 150g + 40g 해서 총 무게는 190g입니다. 기존의 충전기의 절반의 무게입니다.
