@@ -14,7 +14,6 @@ author:
 포트 고장, 발화 등의 이슈를 적지 않게 보아서 제가 들고 다니는 Lenovo 노트북 충전용으로 1포트의 삼성 제품을 구매하게 되었습니다.
 <br>
 ![0.jpg](/img/2021-07-09-samsung-usb-pd-ep-ta865/0.jpg)
-<!-- <img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/0.jpg" width="50%" /> -->
 <br>
 
 제품은 삼성 서비스센터에 전화로 예약해서 구매하였습니다. 충전기 모델명은 **EP-TA865**이고,
@@ -23,21 +22,21 @@ author:
 <br>
 
 # 2. 충전기
-<img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/1.jpg" width="50%" />
+![1.jpg](/img/2021-07-09-samsung-usb-pd-ep-ta865/1.jpg)
 <br>
 
 구매한 **EP-TA865** 충전기입니다. 시중의 대다수의 타 제품들과 달리 접지가 지원된다는 것이 장점입니다.
 USB PD와 PPS, 그리고 최대 65W를 출력한다고 적혀 있습니다.
 
 # 3. 케이블
-<img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/2.jpg" width="50%" />
+![2.jpg](/img/2021-07-09-samsung-usb-pd-ep-ta865/2.jpg)
 <br>
 
 같이 구매한 충전용 케이블 **EP-DW767** 제품입니다. 길이는 1.8m 쯤 되며 인터넷에서 찾아보니 최대 3A의 전류를 출력할 수 있어 보입니다.
 <br>
 
 # 4. 충전
-<img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/6.png" width="50%" />
+![6.png](/img/2021-07-09-samsung-usb-pd-ep-ta865/6.png)
 <br>
 
 보유하고 있는 Lenovo ThinkPad E15 Gen2 AMD 제품에 연결을 해보았습니다.
@@ -53,19 +52,19 @@ USB PD와 PPS, 그리고 최대 65W를 출력한다고 적혀 있습니다.
 엄밀히 말하면 그램은 질량 단위지만 질량은 입에 잘 안 달라 붙으니 무게라 하겠습니다.
 <br>
 
-<img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/3.jpg" width="50%" />
+![3.jpg](/img/2021-07-09-samsung-usb-pd-ep-ta865/3.jpg)
 <br>
 
 충전기 본체의 무게는 150g 정도입니다. 재미있는 점이 충전기 크기에 비해 무게가 꽤 나가서 들었을 때 묵직한 감이 있습니다.
 <br>
 
-<img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/4.jpg" width="50%" />
+![4.jpg](/img/2021-07-09-samsung-usb-pd-ep-ta865/4.jpg)
 <br>
 
 케이블은 40g으로 측정됩니다.
 <br>
 
-<img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/5.jpg" width="50%" />
+![5.jpg](/img/2021-07-09-samsung-usb-pd-ep-ta865/5.jpg)
 <br>
 
 150g + 40g 해서 총 무게는 190g입니다. 기존의 충전기의 절반의 무게입니다.
