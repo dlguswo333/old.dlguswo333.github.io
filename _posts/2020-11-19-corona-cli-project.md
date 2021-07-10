@@ -11,7 +11,7 @@ author:
 본 포스트는 저희의 **corona-cli** 발전 프로젝트를 설명해드리기 위해 제작되었습니다.
 <br>
 
-<!--break-->
+<!--more-->
 
 ## 1. corona-cli란?
 
