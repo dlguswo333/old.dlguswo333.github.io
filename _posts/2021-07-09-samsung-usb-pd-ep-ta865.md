@@ -13,8 +13,8 @@ author:
 이미 USB PD 65W를 지원하고 포트가 여러 개 있는 제품은 출시되었지만,
 포트 고장, 발화 등의 이슈를 적지 않게 보아서 제가 들고 다니는 Lenovo 노트북 충전용으로 1포트의 삼성 제품을 구매하게 되었습니다.
 <br>
-
-<img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/0.jpg" width="50%" />
+![0.jpg](/img/2021-07-09-samsung-usb-pd-ep-ta865/0.jpg)
+<!-- <img src="https://dlguswo333.github.io/img/2021-07-09-samsung-usb-pd-ep-ta865/0.jpg" width="50%" /> -->
 <br>
 
 제품은 삼성 서비스센터에 전화로 예약해서 구매하였습니다. 충전기 모델명은 **EP-TA865**이고,
