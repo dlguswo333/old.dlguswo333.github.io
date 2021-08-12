@@ -12,7 +12,7 @@ author:
 <div>
 By default, Windows Powershell does not look great compared to Linux terminals.<br>
 Also, Git does not play nice with Windows Powershell. Git does not provide
-<kdb>Tab</kdb> auto complete features. Therefore users have to manually type all the long commands. Furthermore, It is hard to read the current status of repositories without typing ``git status`` command.
+<kbd>Tab</kbd> auto complete features. Therefore users have to manually type all the long commands. Furthermore, It is hard to read the current status of repositories without typing ``git status`` command.
 <br>
 </div>
 
@@ -103,5 +103,5 @@ Set-PSReadLineOption -Colors @{Parameter = "Red"}
 ```
 
 # 3. References
-1. https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup#set-up-powerline-in-wsl-ubuntu
-2. https://ohmyposh.dev/
+1. <https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup#set-up-powerline-in-wsl-ubuntu>
+2. <https://ohmyposh.dev/>
