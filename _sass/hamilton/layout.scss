@@ -354,7 +354,7 @@ ul.social-icons {
     box-shadow: 0 0 1px #fff inset;
     white-space: nowrap;
     font-family: monospace;
-    font-size: $base-font-size * 0.9;
+    @include relative-font-size(0.9);
   }
 }
 

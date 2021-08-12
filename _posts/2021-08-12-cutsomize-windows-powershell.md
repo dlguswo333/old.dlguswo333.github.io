@@ -9,17 +9,20 @@ author:
 ---
 
 # 1. Introduction
-<div>
+<p markdown="1">
 By default, Windows Powershell does not look great compared to Linux terminals.<br>
-Also, Git does not play nice with Windows Powershell. Git does not provide
-<kbd>Tab</kbd> auto complete features. Therefore users have to manually type all the long commands. Furthermore, It is hard to read the current status of repositories without typing ``git status`` command.
-<br>
-</div>
+Also, Git does not play nice with Windows Powershell.
+It does not provide <kbd>Tab</kbd> auto complete features.
+Therefore users have to manually type all the long commands.
+</p>
 
 <!--more-->
 
+Furthermore, It is hard to read the current status of repositories without typing ``git status`` command.
+<br>
+
 To solve the problems, we can add modules to Powershell, in order to have
-auto complete Git commands feature and nice looking terminals.
+auto complete Git commands feature and nice looking terminals.<br>
 We can do it by adding modules to Powershell and
 I will discuss about Powerline from now on.<br>
 The following instructions will describe how and what I applied to suit my needs.
