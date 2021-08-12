@@ -9,10 +9,12 @@ author:
 ---
 
 # 1. Introduction
+<div>
 By default, Windows Powershell does not look great compared to Linux terminals.<br>
 Also, Git does not play nice with Windows Powershell. Git does not provide
 <kdb>Tab</kdb> auto complete features. Therefore users have to manually type all the long commands. Furthermore, It is hard to read the current status of repositories without typing ``git status`` command.
 <br>
+</div>
 
 <!--more-->
 
@@ -47,7 +49,6 @@ Execute Powershell, and type the following commands.
 Install-Module posh-git -Scope CurrentUser
 Install-Module oh-my-posh -Scope CurrentUser
 ```
-<br>
 
 The commands install two modules.<br>
 [posh-git](https://github.com/dahlbyk/posh-git) is a module which shows the current working branch and status,
@@ -74,14 +75,12 @@ Inside the editor, we need to import the modules.
 Import-Module posh-git
 Import-Module oh-my-posh
 ```
-<br>
 
 You can pick a theme from the theme list and use it with `Set-PoshPrompt` command.
 Execute the command to get the list of themes installed on your machine:
 ```powershell
 Get-PoshThemes
 ```
-<br>
 
 According to oh-my-posh [documentation](https://ohmyposh.dev/docs/fonts),
 it was designed to use ``Nerd fonts``. However if you do not want to install
