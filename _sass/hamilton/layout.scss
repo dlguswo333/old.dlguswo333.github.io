@@ -2,7 +2,6 @@
  * Site container
  */
 .site-container {
-  height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -325,7 +324,6 @@ ul.social-icons {
   min-width: 0;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
-  scrollbar-width: $scrollbar-width;     // Firefox
 
   padding-left: $spacing-unit;
   padding-right: $spacing-unit;

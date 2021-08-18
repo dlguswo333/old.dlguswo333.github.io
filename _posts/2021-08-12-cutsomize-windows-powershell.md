@@ -49,9 +49,9 @@ Install-Module oh-my-posh -Scope CurrentUser
 ```
 
 The commands install two modules.<br>
-[posh-git](https://github.com/dahlbyk/posh-git) is a module which shows the current working branch and status,
+[**posh-git**](https://github.com/dahlbyk/posh-git) is a module which shows the current working branch and status,
 and provides Git auto complete features.<br>
-And [oh-my-posh](https://ohmyposh.dev/) provides powerline theme features on Powershell prompts.
+And [**oh-my-posh**](https://ohmyposh.dev/) provides powerline theme features on Powershell prompts.
 <br>
 
 ## 3. Edit Powershell Profile
@@ -65,7 +65,7 @@ The profile file can be accessed via an environment variable ``$PROFILE`` within
 notepad $PROFILE
 ```
 
-The above command opens the file with notepad.<br>
+The above command opens the file in notepad.<br>
 Inside the editor, we need to import the modules.
 <br>
 
@@ -74,15 +74,17 @@ Import-Module posh-git
 Import-Module oh-my-posh
 ```
 
-You can pick a theme from the theme list and use it with `Set-PoshPrompt` command.
-Execute the command to get the list of themes installed on your machine:
+You can pick a theme from the theme list and load it with `Set-PoshPrompt` command.
+Execute the following command to get the list of themes installed on your machine:
 ```powershell
 Get-PoshThemes
 ```
 
 According to oh-my-posh [documentation](https://ohmyposh.dev/docs/fonts),
-it was designed to use ``Nerd fonts``. However if you do not want to install
-one of those, you can use a theme with ``minimal`` suffix. 
+it was designed to use ``Nerd fonts``.
+Otherwise you would see crashed square fonts.<br>
+However if you do not want to install
+one of those, you can use themes with ``minimal`` suffix. 
 <br>
 
 Also, if you have a problem with colors such as Grey colored tokens are
