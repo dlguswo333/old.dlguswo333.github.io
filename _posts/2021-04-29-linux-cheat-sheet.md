@@ -55,3 +55,23 @@ The pattern `.[^.]*` will take items that start with `.` but not `..*`, which co
 du -sh .[^.]* *
 ```
 <br>
+
+# which
+`which` is to locate where the executable is.<br>
+However, keep in mind that `which` does not work with aliased commmands.
+For example, it does not print out anything about `python`, but `python3`.
+<br>
+
+# whereis
+`whereis` is to locate the executable, source, and man pages are.<br>
+This also does not work with aliases.
+<br>
+
+# whatis
+`man ...` is sometimes too long to read,
+and if you want to know the basic functionality of the command not all details,
+use `whatis`.
+```bash
+whatis javac
+# javac (1) - Reads Java class and interface definitions and compiles them into bytecode and class files.
+```
