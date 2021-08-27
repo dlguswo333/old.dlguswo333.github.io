@@ -64,12 +64,12 @@ For example, it does not print out anything about `python`, but `python3`.
 
 # whereis
 `whereis` is to locate the executable, source, and man pages are.<br>
-This also does not work with aliases.
+It may not work with aliases.
 <br>
 
 # whatis
 `man ...` is sometimes too long to read,
-and if you want to know the basic functionality of the command not all details,
+and if you want to know the basic functionality of the command not all the details,
 use `whatis`.
 ```bash
 whatis javac
