@@ -47,7 +47,7 @@ Install one otherwise you would see crashed square fonts.
 However you can use minimal themes if you do not want to install Nerd fonts.
 I will explain this one more time later in this post.
 
-![glyphs.png](/img/2021-08-12-cutsomize-windows-powershell/glyphs.png).
+![glyphs.png](/img/2021-08-12-cutsomize-windows-powershell/glyphs.png)
 <br>
 
 ## 2. Install Modules
