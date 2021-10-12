@@ -9,10 +9,10 @@ author:
 ---
 
 # 1. Introduction
-By default, Windows Powershell does not look great compared to Linux terminals.<br>
+By default, Windows Powershell does not look great compared to Linux terminals.
 Also, Git does not play nice with Windows Powershell.
-<!--more-->
 It does not provide <kbd>Tab</kbd> auto complete features.
+<!--more-->
 Therefore users have to manually type all the long commands.
 Furthermore, we need to type ``git staus`` command everytime we need the current status of a repository.
 <br>
@@ -32,11 +32,22 @@ You can pick what you want to apply to your Powershell.
 - Git
 - A Powerline support font
 
-A powerline font needs to be installed since powerline uses its specific fonts.
-Without one, terminals will have squares all over the prompts like below.
+A powerline font needs to be installed since powerline uses its specific fonts,
+which appear to be colored separator arrows between segements.
+Without one, terminals will have broken squares all over the prompts like below.
 <br>
 
 ![powershell-broken.png](/img/2021-08-12-cutsomize-windows-powershell/powershell-broken.png)
+<br>
+
+Also, According to oh-my-posh [documentation](https://ohmyposh.dev/docs/fonts),
+it was designed to use ``Nerd fonts`` which contain extensive glyphs
+which are not included in non-Nerd fonts (standard fonts) like the image below.
+Install one otherwise you would see crashed square fonts.
+However you can use minimal themes if you do not want to install Nerd fonts.
+I will explain this one more time later in this post.
+
+![glyphs.png](/img/2021-08-12-cutsomize-windows-powershell/glyphs.png).
 <br>
 
 ## 2. Install Modules
@@ -80,11 +91,9 @@ Execute the following command to get the list of themes installed on your machin
 Get-PoshThemes
 ```
 
-According to oh-my-posh [documentation](https://ohmyposh.dev/docs/fonts),
-it was designed to use ``Nerd fonts``.
-Otherwise you would see crashed square fonts.<br>
-However if you do not want to install
-one of those, you can use themes with ``minimal`` suffix. 
+If you do not want to install ``Nerd fonts``,
+you may use themes with ``minimal`` suffix, 
+since minimal themes do not print out nerd glyphs.
 <br>
 
 Also, if you have a problem with colors such as Grey colored tokens are
