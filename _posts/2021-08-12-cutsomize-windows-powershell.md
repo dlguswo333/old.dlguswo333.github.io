@@ -13,14 +13,17 @@ By default, Windows Powershell does not look great compared to Linux terminals.
 Also, Git does not play nice with Windows Powershell.
 It does not provide <kbd>Tab</kbd> auto complete features.
 <!--more-->
-Therefore users have to manually type all the long commands.
-Furthermore, we need to type ``git staus`` command everytime we need the current status of a repository.
+Therefore users have to manually type all the long Git commands.
+Furthermore, we need to type ``git staus`` command everytime we
+need the current status of a repository, such as the number of
+modified files or the current working branch name.
 <br>
 
 However, we can add modules to Powershell in order to have
-auto complete Git commands feature and nice looking terminals.<br>
-I will discuss about adding the modules and customizing Powershell from now on.<br>
-The following instructions will describe how and what I applied to suit my needs.
+auto complete Git commands feature and nice looking terminals.
+I will discuss about adding the modules and customizing
+Powershell from now on. The following instructions
+will describe how and what I applied to suit my needs.
 You can pick what you want to apply to your Powershell.
 <br>
 
@@ -45,7 +48,7 @@ it was designed to use ``Nerd fonts`` which contain extensive glyphs
 which are not included in non-Nerd fonts (standard fonts) like the image below.
 Install one otherwise you would see crashed square fonts.
 However you can use minimal themes if you do not want to install Nerd fonts.
-I will explain this one more time later in this post.
+I will explain it later in this post.
 
 ![glyphs.png](/img/2021-08-12-cutsomize-windows-powershell/glyphs.png)
 <br>
@@ -60,9 +63,9 @@ Install-Module oh-my-posh -Scope CurrentUser
 ```
 
 The commands install two modules.<br>
-[**posh-git**](https://github.com/dahlbyk/posh-git) is a module which shows the current working branch and status,
-and provides Git auto complete features.<br>
-And [**oh-my-posh**](https://ohmyposh.dev/) provides powerline theme features on Powershell prompts.
+[**posh-git**](https://github.com/dahlbyk/posh-git) is a module which shows
+the current working branch and status, and provides Git auto complete features.<br>
+[**oh-my-posh**](https://ohmyposh.dev/) provides powerline theme features on Powershell prompts.
 <br>
 
 ## 3. Edit Powershell Profile
@@ -92,14 +95,14 @@ Get-PoshThemes
 ```
 
 If you do not want to install ``Nerd fonts``,
-you may use themes with ``minimal`` suffix, 
-since minimal themes do not print out nerd glyphs.
+you may use themes with ``minimal`` suffix
+since minimal themes do not need nerd glyphs.
 <br>
 
-Also, if you have a problem with colors such as Grey colored tokens are
-hard to read on black background, you can set the color of
-specific tokens with `Set-PSReadLineOption` command.<br>
-The below is the complete commands from my ``$PROFILE`` file.
+Also, if you have a problem with readability due to colors such as
+Grey colored tokens are hard to read on black background, you can
+set the color of specific tokens with `Set-PSReadLineOption` command.<br>
+The below shows my ``$PROFILE`` configurations.
 <br>
 
 ```powershell
