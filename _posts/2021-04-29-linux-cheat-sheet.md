@@ -8,6 +8,12 @@ author:
   - 이현재
 ---
 
+This post decribes cheats that you can use within Linux distros.
+<!--more-->
+There are tons of commands and tons of arguements,
+so this will help you recall the powerful commands you have used
+but have forgotten how to type.
+
 # apt
 ## 1. List All Available Versions of a Package on apt
 ```bash
