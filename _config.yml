@@ -26,7 +26,7 @@ exclude:
   - scripts/
   - README.md
   - jekyll-theme-hamilton.gemspec
-excerpt_seperator:  <!--more-->
+excerpt_separator:  <!--more-->
 
 # Jekyll SEO Tag (Optional)
 # =========================
