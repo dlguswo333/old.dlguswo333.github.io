@@ -8,27 +8,35 @@ author:
   - 이현재
 ---
 
-If you are trying to do some deep learning, you would want them to run inside a Docker,
-because deep learning frameworks are quite tricky and it is not easy to set the environment at once.
+If you are trying to do some deep learning,
+you would want them to run inside a Docker,
+because deep learning frameworks are quite tricky and
+it is not easy to set the environment at once.
 <br>
 
 <!--more-->
 
-They are sensitive to the run time environment, so you would likely to install them over and over again,
-and the situation could go worse and worse that you cannot go back to the initial environment.
+They are sensitive to the run time environment,
+so you would likely to install them over and over again,
+and the situation could go worse and worse that
+you cannot go back to the initial environment.
 <br>
 
-This is why you would need Docker, since they can be isolated from outside of the container,
-and even if something goes wrong, you can just remove the container and install again.<br>
+This is why you would need Docker, since they can be isolated
+from outside of the container,
+and even if something goes wrong, 
+you can just remove the container and install again.<br>
 Moreover, installation does not take too long!
 <br>
 
 Docker is not a virtual machine and but is similar to a virtual machine.
-Actually that is how I understand of Docker since I had started using it.
+But unlike other virtual machines, Docker shares OS with the host and
+that is the main advantage of Docker being lightweight.
 <br>
 
 Running Horovod inside a container is an easy one.<br>
-You can just download pre-defined Docker images built (e.g. <https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow>),
+You can just download pre-defined Docker images built
+(e.g. <https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow>),
 and run Horovod with argument you like.
 <br>
 
@@ -53,6 +61,7 @@ docker run --gpus all -it --cap-add sys_admin \
     --network host --name docker_name --hostname docker_name \
     nvcr.io/nvidia/tensorflow:20.10-tf1-py3;
 ```
+
 The point is ``--network host``. It means the container can use the host machine's network stack,
 and the network interfaces are visible to the container.<br>
 Briefly, the same network is shared between the host and the container.
@@ -66,8 +75,8 @@ Use ``--network host`` instead.
 <br>
 
 ## 2. ssh Settings
-Essentially Horovod is implemented with ssh communication and it is essential that there is no problem
-or user input prompt on ssh connection.
+Essentially Horovod is implemented with ssh connection and
+it is important to clarify that there is no problem in ssh connection or user input prompt on ssh connection.
 <br>
 
 You need to generate ssh keys and copy public keys from one to the others
