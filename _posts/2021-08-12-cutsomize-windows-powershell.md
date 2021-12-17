@@ -112,7 +112,7 @@ Set-PoshPrompt -Theme hotstick.minimal
 Set-PSReadlineOption -Colors @{operator = "Red"}
 Set-PSReadlineOption -Colors @{type = "Red"}
 Set-PSReadLineOption -Colors @{Parameter = "Red"}
-{% endhighlight}
+{% endhighlight %}
 
 # 3. References
 1. <https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup#set-up-powerline-in-wsl-ubuntu>
