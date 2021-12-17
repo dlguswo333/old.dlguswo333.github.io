@@ -105,14 +105,14 @@ set the color of specific tokens with `Set-PSReadLineOption` command.<br>
 The below shows my ``$PROFILE`` configurations.
 <br>
 
-```powershell
+{% highlight powershell linenos %}
 Import-Module posh-git
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme hotstick.minimal
 Set-PSReadlineOption -Colors @{operator = "Red"}
 Set-PSReadlineOption -Colors @{type = "Red"}
 Set-PSReadLineOption -Colors @{Parameter = "Red"}
-```
+{% endhighlight}
 
 # 3. References
 1. <https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup#set-up-powerline-in-wsl-ubuntu>
