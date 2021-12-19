@@ -2,25 +2,25 @@
 layout: post
 toc: true
 math: true
-title: "k means clustering"
+title: "k Means Clustering"
 categories: 
 tags: [Algorithms, Python]
 author:
   - 이현재
 ---
 
-# 1. What is k Means Clustering?
 <!-- image (unclustered->clustered) -->
 **k means clustering** divides arbitrary data into groups
 based on their similarity (or distance) into ***k*** clusters.
 The algorithm is effective at grouping unclustered data
 without any difficulty, but the result is not uniform (randomness)
 and it may require some time.
+<!--more-->
 
 However, the result will be acceptable if the data pattern can be
 well-categorized and the algorithm is easy to understand and implement.
 
-# 2. How Does it Work?
+# 1. How Does it Work?
 First of all, the data need to be able to produce similarities between them,
 such as in forms of distance. One example is a vector of *(1 X N)*.
 a vector *A* and a vector *B*, their distance can be calculated with
@@ -65,7 +65,7 @@ next centroids is hard work. In that case, you may decide to exit the loop
 after some *N* repetition or the differences between the previous and
 the next centroids are negligible.
 
-# 3. k Means Clustering in Python Code
+# 2. k Means Clustering in Python Code
 {% highlight python linenos %}
 def kmeans_cluster(k:int, vectors:List[List[float]])->List[List[List[float]]]:
     ''' Run k means clustering on given vectors and return centroids.
@@ -109,7 +109,7 @@ def kmeans_cluster(k:int, vectors:List[List[float]])->List[List[List[float]]]:
 
 
 
-# 4. Hierarchical k Means Clustering
+# 3. Hierarchical k Means Clustering
 
 
-# 5. Hierarchical k means Clustering in Python Code
+# 4. Hierarchical k means Clustering in Python Code
