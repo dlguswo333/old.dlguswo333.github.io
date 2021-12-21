@@ -215,6 +215,28 @@
   @media screen and (min-width: $on-small) {
     display: block !important;
   }
+  .button-wrapper {
+    width:fit-content;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 0;
+
+    .go-to-button {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      background-color: #424242;
+      border: 1px solid #ccc;
+      outline: none;
+      &:hover{
+        background-color: #666;
+      }
+      @include media-query($on-small) {
+        display: none;
+      }
+    }
+  }
 }
 
 .sidebar-section {

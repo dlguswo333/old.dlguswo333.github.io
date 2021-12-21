@@ -18,6 +18,18 @@
             {% else %}
               {% include sidebar.html %}
             {% endif %}
+            <div class="button-wrapper">
+              <button class="go-to-button" id="up-button">
+                <svg width="100%" height="100%" viewBox="0 0 100 100">
+                  <path d="M20 60 L50 30 L80 60 L50 30 L20 60" stroke="white" stroke-width="10" fill="none">
+              </svg>
+              </button>
+              <button class="go-to-button" id="bottom-button">
+                <svg width="100%" height="100%" viewBox="0 0 100 100">
+                  <path d="M20 40 L50 70 L80 40 L50 70 L20 40" stroke="white"  stroke-width="10" fill="none">
+              </svg>
+              </button>
+            </div>
           </aside>
           <main class="site-main" id="site-main" aria-label="Content">
             {{ content }}
@@ -29,5 +41,29 @@
       </div>
     </div>
   </body>
-
+  <script>
+    function scrollToTop(){
+      let currentY=window.scrollY;
+      if(currentY>0){
+        setTimeout(function(){
+          let scrollToY=(currentY>200 ? currentY/15*14 : Math.max(currentY-10, 0));
+            window.scrollTo(0, scrollToY);
+          scrollToTop();
+        }, 16);
+      }
+    }
+    function scrollToBottom(){
+      let currentY=window.scrollY;
+      let bottomY=document.body.offsetHeight-window.innerHeight;
+      if(currentY<bottomY-1){
+        setTimeout(function(){
+          let scrollToY=(currentY<bottomY-200 ? currentY+(bottomY-currentY)/15 : Math.min(currentY+10, bottomY));
+            window.scrollTo(0, scrollToY);
+            scrollToBottom();
+        }, 16);
+      }
+    }
+    document.getElementById("up-button").onclick=scrollToTop;
+    document.getElementById("bottom-button").onclick=scrollToBottom;
+  </script>
 </html>
