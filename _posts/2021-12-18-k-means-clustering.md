@@ -11,22 +11,22 @@ author:
 
 ![clustering.png](/img/2021-12-18-k-means-clustering/clustering.png)
 
-**k means clustering** divides arbitrary data into groups
-based on their similarity (or distance) into ***k*** clusters.
-The algorithm is effective at grouping unclustered data if you cannot
-have access to artificial intelligence, but the result is not uniform
-due to randomness and it may require some time to compute.
+**k means clustering** divides arbitrary data ***k*** clusters
+based on their similarity (or distance). This algorithm is effective at
+grouping unclustered data if you cannot have access to artificial
+intelligence, but the result is not uniform due to randomness
+and it may require long time to compute the results.
 <!--more-->
 
-However, the result will be acceptable if the data pattern can be
+However, the result will be acceptable as long as the data pattern is
 well-categorized and the algorithm is easy to understand and implement.
 
 # 1. How Does it Work?
 First of all, the data need to be able to produce similarities between them,
-such as in forms of distance. One example is a vector of *(1 X N)*.
-a vector *A* and a vector *B*, their distance can be calculated with
+such as in forms of distance. One example is a vector of *(1 x N)*.
+Given two vectors, their distance can be calculated with
 Manhattan distance or Euclidean distance.
-A 2D coordinates is also a vector of *(1 X N)*.
+A 2D coordinates is also a vector, with the shape of *(1 x 2)*.
 
 $$
 Manhattan\ Distance: \sum_{i=1}^N{|A_i-B_i|}
@@ -37,10 +37,10 @@ Euclidean\ Distance: \sqrt{\sum_{i=1}^N{(A_i-B_i)^2}}
 $$
 
 They can be referred to as L1 distance and L2 distance repectively.
-If you want to emphasize on the big differences, choose
+If you want to give more weights on bigger differences, choose
 L2 (Euclidean) distance since the bigger the difference is,
 the much bigger the squared result is.
-Else, choose L1 (Manhattan) distance.
+Otherwise, choose L1 (Manhattan) distance.
 
 To describe keypoints, k means algorithms works as below:
 1. Select initial centroids randomly.
