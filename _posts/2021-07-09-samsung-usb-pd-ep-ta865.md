@@ -2,7 +2,7 @@
 layout: post
 toc: true
 title: "삼성 USB PD 충전기 EP-TA865"
-categories: 
+categories: ["IRL"]
 tags: [Review]
 author:
   - 이현재

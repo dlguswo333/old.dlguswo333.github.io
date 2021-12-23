@@ -2,7 +2,7 @@
 layout: post
 toc: true
 title: "Linux Cheat Sheet"
-categories: 
+categories: ["Programming"]
 tags: [Linux]
 author:
   - 이현재
