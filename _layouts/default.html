@@ -46,7 +46,7 @@
       let currentY=window.scrollY;
       if(currentY>0){
         setTimeout(function(){
-          let scrollToY=(currentY>200 ? currentY/15*14 : Math.max(currentY-10, 0));
+          let scrollToY=(currentY>200 ? currentY/15*14 : Math.max(currentY-20, 0));
             window.scrollTo(0, scrollToY);
           scrollToTop();
         }, 16);
@@ -57,7 +57,7 @@
       let bottomY=document.body.offsetHeight-window.innerHeight;
       if(currentY<bottomY-1){
         setTimeout(function(){
-          let scrollToY=(currentY<bottomY-200 ? currentY+(bottomY-currentY)/15 : Math.min(currentY+10, bottomY));
+          let scrollToY=(currentY<bottomY-200 ? currentY+(bottomY-currentY)/15 : Math.min(currentY+20, bottomY));
             window.scrollTo(0, scrollToY);
             scrollToBottom();
         }, 16);
