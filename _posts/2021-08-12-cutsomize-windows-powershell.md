@@ -2,7 +2,7 @@
 layout: post
 toc: true
 title: "Customize Windows Powershell"
-categories: 
+categories: ["Programming"]
 tags: [Windows, Powershell, Git]
 author:
   - 이현재
