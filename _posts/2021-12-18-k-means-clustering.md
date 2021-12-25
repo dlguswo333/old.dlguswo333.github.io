@@ -52,15 +52,15 @@ To describe keypoints, k means algorithms works as below:
 
 ## 1) Select Initial Centroids Randomly.
 Since we have no information on the data, we randomly select
-*k* vectors and call them centroids. We are skipping better implementations
-on how to do this, but it will be much more effective to select vectors
-that can represent each cluster. How don't you try to select vectors which
-are as much far from each other as you can within negligible time?
+*k* vectors and call them centroids. We are skipping how to select them better,
+but it will be much more effective to select vectors
+that can well-represent each cluster. Why don't you try to select vectors as
+much far from each other as you can within reasonable time?
 
 ## 2) Map each Vector to the Nearest Centroid.
 For each vector, find the nearest centroid and group them together (cluster).
-It may not look okay with random initial centroids, but it is okay.
-We will get better centroids.
+It may not look fine with random initial centroids, but it is okay.
+We will find better centroids fron now on.
 
 ## 3) Calculate the next Centroids by Averaging the Vectors within a Cluster.
 For each cluster you acquired, get the average of vectors that reside in
@@ -131,8 +131,9 @@ Randomly select indices and pull the vectors to make them centroids.
 Within the while loop, we map each vector with the nearest centroid.
 After that, we get the average of vectors within each cluster,
 by summing all the vectors and dividing by the number of vectors.
-In cases where there is no vector within a cluster,
-we retain the previous centroid value.
+In cases where there is no vector within a cluster (It sounds not
+possible, but it does happen sometimes!),
+we keep the previous centroid value.
 <br>
 <br>
 <br>
@@ -174,7 +175,8 @@ most of the time), recursively calls itself on each clustered data.
 Think of a binary tree. Or some algorithm like merge sort.
 By recursively calling itself, the algorithm sub-divides the cluster,
 creating another 2 sub-clusters from one cluster. The time complexity
-is $$O(log_kN)$$.
+is $$O(log_2kN)$$, since every level takes $$O(N)$$
+to compute and there are $$O(log_2k)$$ levels.
 
 ![hierarchical-k-means-clustering.png](/img/2021-12-18-k-means-clustering/hierarchical-k-means-clustering.png)
 
