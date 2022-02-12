@@ -25,6 +25,7 @@ blockquote {
 pre,
 code {
   background-color: $code-background-color;
+  border: 1px solid $border-color-light;
 }
 
 pre {
