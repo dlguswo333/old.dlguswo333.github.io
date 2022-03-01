@@ -43,25 +43,10 @@
   </body>
   <script>
     function scrollToTop(){
-      let currentY=window.scrollY;
-      if(currentY>0){
-        setTimeout(function(){
-          let scrollToY=(currentY>200 ? currentY/15*14 : Math.max(currentY-20, 0));
-            window.scrollTo(0, scrollToY);
-          scrollToTop();
-        }, 16);
-      }
+      window.scrollTo({top: 0, behavior: "smooth"});
     }
     function scrollToBottom(){
-      let currentY=window.scrollY;
-      let bottomY=document.body.offsetHeight-window.innerHeight;
-      if(currentY<bottomY-1){
-        setTimeout(function(){
-          let scrollToY=(currentY<bottomY-200 ? currentY+(bottomY-currentY)/15 : Math.min(currentY+20, bottomY));
-            window.scrollTo(0, scrollToY);
-            scrollToBottom();
-        }, 16);
-      }
+      window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
     }
     document.getElementById("up-button").onclick=scrollToTop;
     document.getElementById("bottom-button").onclick=scrollToBottom;
