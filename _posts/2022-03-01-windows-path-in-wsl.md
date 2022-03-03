@@ -11,11 +11,11 @@ author:
 
 In *Windows Subsystem for Linux* (aka wsl),
 if you have not touched any wsl config
-(or something has not been chagned),
-<!--more-->
+(or something has not been changed),
 then you can start apps installed in Windows,
 such as vscode. you can start vscode installed
 in Windows with `code` command.
+<!--more-->
 
 This is because wsl defaults to load PATH
 environment variable from Windows.
@@ -33,17 +33,18 @@ contents.
 appendWindowsPath=False
 ```
 
-As the name states, wsl will not append Windows PATH
+As the name states, when the variable is set to False,
+wsl will not append Windows PATH
 variable to the wsl PATH variable.
 
 But what if you want to append a specific path?
-Such as vscode? It will be useful if you can start
+Such as vscode? It would be still useful if you can start
 vscode easily in your wsl instance.
 
 You can do it as you normally do in your Linux system.
 In your shell startup script such as `.zshrc` or
-`.bashrc`, append the path, but in perspective of wsl
-instance.
+`.bashrc`, append the path, but in the
+perspective of wsl instance.
 
 ```bash
 PATH="$PATH:/mnt/c/<Path to vscode>/Microsoft VS Code/bin"
