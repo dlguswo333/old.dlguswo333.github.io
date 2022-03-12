@@ -78,7 +78,7 @@ table {
 
 .site-title {
   color: $text-color;
-  
+
   &:visited {
     color: $text-color;
   }
@@ -185,5 +185,8 @@ ul.post-tags {
     &:hover {
       background-color: $border-color-light;
     }
+  }
+  .toc > li:last-child a {
+    border: none;
   }
 }
