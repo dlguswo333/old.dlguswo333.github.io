@@ -152,7 +152,7 @@
       li {
         float: left;
       }
-  
+
       li a {
         display: inline-block;
         text-align: center;
@@ -181,7 +181,7 @@
 .site-body {
   display: grid;
   grid-template-columns: calc(#{$content-width} * 0.24) 1fr;
-  
+
   @include media-query($on-medium) {
     grid-template-columns: calc(#{$content-width} * 0.18) 1fr;
   }
@@ -229,6 +229,7 @@
       background-color: #424242;
       border: 1px solid #ccc;
       outline: none;
+      cursor: pointer;
       &:hover{
         background-color: #666;
       }
@@ -266,9 +267,9 @@ ul.contact-list {
   margin-bottom: 0;
 
   li {
-    overflow: hidden; 
-    white-space: nowrap; 
-    text-overflow: ellipsis; 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
