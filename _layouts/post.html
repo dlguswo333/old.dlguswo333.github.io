@@ -27,7 +27,7 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       {%- if page.last_modified_at -%}
-        ~ 
+        ~
         {%- assign mdate = page.last_modified_at | date_to_xmlschema -%}
         <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
           {{ mdate | date: date_format }}
@@ -88,5 +88,55 @@ layout: default
   {% if page.comments != false and jekyll.environment == "production" and site.disqus %}
     {% include disqus.html %}
   {% endif %}
-  
+
 </article>
+<script>
+  /**
+   *  toc applies from h1 to h3.
+   *  see commit a564689.
+   */
+  const headingArray=Array.from(document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3')).reverse();
+  console.log(headingArray);
+  document.addEventListener('scroll', throttleWithLast(scrollHandler, 100));
+  const tocArray=Array.from(document.querySelectorAll('.toc a'));
+
+  function throttleWithLast(func, interval){
+    let lastTimestamp=0;
+    let curTimeStamp=0;
+    let timer=0;
+
+    return function(){
+      curTimeStamp=Date.now();
+      clearTimeout(timer);
+      if(curTimeStamp-lastTimestamp>=interval){
+        lastTimestamp=curTimeStamp;
+        func();
+      }
+      else{
+        timer=setTimeout(func, interval);
+      }
+    }
+  }
+
+  function scrollHandler(){
+    function removeActive(){
+      tocArray.some(function(toc){
+        if(toc.classList.contains('active')){
+          toc.classList.remove('active');
+          return true;
+        }
+      });
+    }
+    const curHeading=headingArray.find((heading)=>heading.getBoundingClientRect().top<=100);
+    if(curHeading){
+      const curToc=tocArray.find((toc)=>toc.href.includes(encodeURI(curHeading.id)));
+      if(curToc){
+        removeActive();
+        curToc.classList.add('active');
+      }
+    }
+    else{
+      removeActive();
+    }
+  }
+</script>

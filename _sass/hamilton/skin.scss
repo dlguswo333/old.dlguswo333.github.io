@@ -189,4 +189,7 @@ ul.post-tags {
   .toc > li:last-child a {
     border: none;
   }
+  .toc a.active {
+    background-color: $border-color-light;
+  }
 }
