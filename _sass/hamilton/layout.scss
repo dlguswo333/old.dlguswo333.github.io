@@ -18,7 +18,12 @@
   line-height: $base-font-size * 3;
 
   @include media-query($on-small) {
+    border-top: none;
     display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
   }
 }
 
