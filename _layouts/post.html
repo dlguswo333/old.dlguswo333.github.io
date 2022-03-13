@@ -96,7 +96,6 @@ layout: default
    *  see commit a564689.
    */
   const headingArray=Array.from(document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3')).reverse();
-  console.log(headingArray);
   document.addEventListener('scroll', throttleWithLast(scrollHandler, 100));
   const tocArray=Array.from(document.querySelectorAll('.toc a'));
 

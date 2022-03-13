@@ -60,7 +60,6 @@ table {
   }
 }
 
-
 ///////// Layout ///////////
 
 .site-header {
@@ -68,7 +67,7 @@ table {
   border-top-color: $border-color-dark;
   border-bottom-color: $border-color-light;
 }
-.site-body{
+.site-body {
   border-color: $border-color-light;
 }
 .site-sidebar {
@@ -178,18 +177,20 @@ ul.post-tags {
 .toc-nav {
   border-color: $border-color;
 
-  ul li a {
-    color: $text-color;
-    border-color: $border-color;
+  ul {
+    li a {
+      color: $text-color;
+      border-color: $border-color;
 
-    &:hover {
-      background-color: $border-color-light;
+      &:hover {
+        background-color: $border-color-light;
+      }
+      &.active {
+        background-color: $border-color-light;
+      }
     }
-  }
-  .toc > li:last-child a {
-    border: none;
-  }
-  .toc a.active {
-    background-color: $border-color-light;
+    &.toc > li:last-child a {
+      border-bottom: none;
+    }
   }
 }
