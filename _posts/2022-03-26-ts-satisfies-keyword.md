@@ -25,12 +25,12 @@ const SMARTPHONE_MAPPING = {
 ```
 
 Of course, there are numerous phones out there,
-so we might add more phones later on. Of course,
-we do not know what those phones are called,
-so `SMARTPHONE_MAPPING` would have arbitrary keys.
+so we might add more phones later on. Also,
+we do not know what names those phone will be called,
+so `SMARTPHONE_MAPPING` would have arbitrary random keys.
 
-But while doing that, we do not want to introduce any errors,
-such as ***developer errors*** like below:
+But while adding more phones, we do not want to introduce any errors,
+such as usual ***developer errors*** like below:
 
 ```ts
 const SMARTPHONE_MAPPING = {
@@ -42,7 +42,7 @@ const SMARTPHONE_MAPPING = {
 ```
 <br>
 
-what we want inside `SMARTPHONE_MAPPING` are nothing but
+What we want inside `SMARTPHONE_MAPPING` are nothing but
 display size and weight properties only.
 How do we ensure that the values in the object are of the type?
 Well, we can give a type to the object, like below:
@@ -59,7 +59,7 @@ const SMARTPHONE_MAPPING: SMARTPHONE_MAP_TYPE = {
 ```
 <br>
 
-But the problem of giving the object the type is that
+But the problem of giving the object a type is that
 IDE now does not show us the autocomplete of the member keys.
 
 ![with-autocomplete](/img/2022-03-26-ts-satisfies-keyword/with-autocomplete.png)
@@ -74,17 +74,17 @@ IDE now does not show us the autocomplete of the member keys.
 
 Well, why does this happen?
 This is because the type of the variable is `SMARTPHONE_MAP_TYPE`,
-where there is no information what are in the object.
+where there is no information about what is in the object.
 **All the information about what's inside the variable
-has been deprecated.** It only gurantees about keys is that
+has been deprecated.** All it knows about the keys is that
 they are string type.
 
-![with-type](/img/2022-03-26-ts-satisfies-keyword/with-type.png)
+![without-type](/img/2022-03-26-ts-satisfies-keyword/without-type.png)
 
 **Before Having explicit type**
 <br><br>
 
-![without-type](/img/2022-03-26-ts-satisfies-keyword/without-type.png)
+![with-type](/img/2022-03-26-ts-satisfies-keyword/with-type.png)
 
 **After Having explicit type**
 <br><br>
@@ -92,6 +92,10 @@ they are string type.
 `SMARTPHONE_MAP_TYPE` does not contain any information about
 what are members but only that the keys are in string,
 and the values are in object containing the two properties.
+
+`SMARTPHONE_MAPPING` does know, but
+giving the type to the object made it
+blind about what is inside the object.
 
 ## Solution
 To solve this, we can implement a generic function
