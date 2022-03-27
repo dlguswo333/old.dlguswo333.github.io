@@ -3,6 +3,7 @@ description: 이현재의 블로그
 author: 이현재
 avatar: https://github.com/dlguswo333.png
 email: dlguswo002@gmail.com
+url: "https://dlguswo333.github.io"
 
 plugins:
   - jekyll-seo-tag
@@ -13,11 +14,11 @@ plugins:
 paginate: 10
 
 # Uncomment the below line and set the tracking ID for enabling Google Analytics
-# 
-# google_analytics: 
+#
+# google_analytics:
 
 # Uncomment the below lines and set the Disqus shortname for enabling Disqus
-# 
+#
 # disqus:
 
 # Jekyll
@@ -28,8 +29,6 @@ exclude:
   - jekyll-theme-hamilton.gemspec
 excerpt_separator:  <!--more-->
 
-# Jekyll SEO Tag (Optional)
-# =========================
 logo: https://github.com/dlguswo333.png
 social:
   name: 이현재, Lee Hyeonjae
