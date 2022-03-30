@@ -81,3 +81,12 @@ use `whatis`.
 whatis javac
 # javac (1) - Reads Java class and interface definitions and compiles them into bytecode and class files.
 ```
+
+# nslookup
+The command gets a domain name, query to a DNS server,
+and outputs an corresponding IP address.
+It accepts a DNS server IP address optionally.
+It also works on Windows Powershell.
+```bash
+nslookup <domain-name> <DNS-IP-address>
+```
