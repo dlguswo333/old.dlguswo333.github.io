@@ -45,12 +45,12 @@
   </body>
   <script>
     function switchTheme(){
-      const useDarkTheme = localStorage.getItem("useDarkTheme");
-      if (useDarkTheme !== null) {
-        localStorage.removeItem("useDarkTheme");
+      const useLightTheme = localStorage.getItem("useLightTheme");
+      if (useLightTheme !== null) {
+        localStorage.removeItem("useLightTheme");
       }
       else {
-        localStorage.setItem("useDarkTheme", "true");
+        localStorage.setItem("useLightTheme", "true");
       }
       location.reload();
     }
@@ -61,9 +61,9 @@
       window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
     }
     function setupThemeSwitch(){
-      const useDarkTheme = localStorage.getItem("useDarkTheme");
+      const useLightTheme = localStorage.getItem("useLightTheme");
       const themeSwitch = document.getElementById("theme-switch");
-      themeSwitch.classList.add(useDarkTheme !== null ? 'light' : 'dark');
+      themeSwitch.classList.add(useLightTheme !== null ? 'dark' : 'light');
       themeSwitch.onclick=switchTheme;
     }
     setupThemeSwitch();
