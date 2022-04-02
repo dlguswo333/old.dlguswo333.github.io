@@ -103,6 +103,10 @@ table {
   }
 }
 
+.site-main {
+  border-color: $border-color-light;
+}
+
 .post-list {
   li {
     border-bottom-color: $border-color-light;
@@ -127,7 +131,7 @@ table {
 
 ul.post-tags {
   li {
-    background-color: $border-color-light;
+    background-color: $border-color-dark;
   }
 }
 
@@ -183,10 +187,10 @@ ul.post-tags {
       border-color: $border-color;
 
       &:hover {
-        background-color: $border-color-light;
+        background-color: $border-color-dark;
       }
       &.active {
-        background-color: $border-color-light;
+        background-color: $border-color-dark;
       }
     }
     &.toc > li:last-child a {

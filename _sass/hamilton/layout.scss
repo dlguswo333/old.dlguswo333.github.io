@@ -223,10 +223,27 @@
     display: block !important;
   }
   .button-wrapper {
-    width:fit-content;
+    width: fit-content;
     margin-top: 20px;
     margin-left: auto;
     margin-right: 0;
+
+    .theme-switch {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      outline: none;
+      padding: 0;
+      &.light {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='white' /%3E%3Ccircle cx='50' cy='50' r='20' fill='none' stroke='black' stroke-width='6' /%3E%3Cline x1='8' y1='50' x2='22' y2='50' stroke='black' stroke-width='6'/%3E%3Cline x1='8' y1='50' x2='22' y2='50' stroke='black' stroke-width='6' transform='rotate(45, 50, 50)'/%3E%3Cline x1='8' y1='50' x2='22' y2='50' stroke='black' stroke-width='6' transform='rotate(90, 50, 50)'/%3E%3Cline x1='8' y1='50' x2='22' y2='50' stroke='black' stroke-width='6' transform='rotate(135, 50, 50)'/%3E%3Cline x1='8' y1='50' x2='22' y2='50' stroke='black' stroke-width='6' transform='rotate(180, 50, 50)'/%3E%3Cline x1='8' y1='50' x2='22' y2='50' stroke='black' stroke-width='6' transform='rotate(225, 50, 50)'/%3E%3Cline x1='8' y1='50' x2='22' y2='50' stroke='black' stroke-width='6' transform='rotate(270, 50, 50)'/%3E%3Cline x1='8' y1='50' x2='22' y2='50' stroke='black' stroke-width='6' transform='rotate(315, 50, 50)'/%3E%3C/svg%3E%0A");
+      }
+      &.dark {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23111' /%3E%3Cpath d='M 50 20 A 30 30 0 1 1 24.02 65 A 30 30 1 0 0 50 20 Z' stroke-linecap='round' fill='none' stroke='%23eee' stroke-width='6' /%3E%3C/svg%3E%0A");
+      }
+    }
 
     .go-to-button {
       display: inline-block;
@@ -239,9 +256,6 @@
       cursor: pointer;
       &:hover{
         background-color: #666;
-      }
-      @include media-query($on-small) {
-        display: none;
       }
     }
   }
@@ -352,8 +366,8 @@ ul.social-icons {
 .site-main {
   flex: 1 0 auto;
   min-width: 0;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
+  border-left: 1px solid;
+  border-right: 1px solid;
 
   padding-left: $spacing-unit;
   padding-right: $spacing-unit;

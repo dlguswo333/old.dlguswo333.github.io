@@ -19,15 +19,17 @@
               {% include sidebar.html %}
             {% endif %}
             <div class="button-wrapper">
+              <button class="theme-switch" id="theme-switch" aria-label="theme switch">
+              </button>
               <button class="go-to-button" id="up-button" aria-label="scroll to top">
                 <svg width="100%" height="100%" viewBox="0 0 100 100">
                   <path d="M20 60 L50 30 L80 60 L50 30 L20 60" stroke="white" stroke-width="10" fill="none">
-              </svg>
+                </svg>
               </button>
               <button class="go-to-button" id="bottom-button" aria-label="scroll to bottom">
                 <svg width="100%" height="100%" viewBox="0 0 100 100">
                   <path d="M20 40 L50 70 L80 40 L50 70 L20 40" stroke="white"  stroke-width="10" fill="none">
-              </svg>
+                </svg>
               </button>
             </div>
           </aside>
@@ -42,12 +44,29 @@
     </div>
   </body>
   <script>
+    function switchTheme(){
+      const useDarkTheme = localStorage.getItem("useDarkTheme");
+      if (useDarkTheme !== null) {
+        localStorage.removeItem("useDarkTheme");
+      }
+      else {
+        localStorage.setItem("useDarkTheme", "true");
+      }
+      location.reload();
+    }
     function scrollToTop(){
       window.scrollTo({top: 0, behavior: "smooth"});
     }
     function scrollToBottom(){
       window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
     }
+    function setupThemeSwitch(){
+      const useDarkTheme = localStorage.getItem("useDarkTheme");
+      const themeSwitch = document.getElementById("theme-switch");
+      themeSwitch.classList.add(useDarkTheme !== null ? 'light' : 'dark');
+      themeSwitch.onclick=switchTheme;
+    }
+    setupThemeSwitch();
     document.getElementById("up-button").onclick=scrollToTop;
     document.getElementById("bottom-button").onclick=scrollToBottom;
   </script>
