@@ -24,12 +24,12 @@
 {% unless site.skin %}
   <script>
     let filename = "";
-    const useDarkTheme = localStorage.getItem("useDarkTheme");
-    if (useDarkTheme !== null) {
-      filename = "{{ '/assets/css/skin-midnight.css' | relative_url }}";
+    const useLightTheme = localStorage.getItem("useLightTheme");
+    if (useLightTheme !== null) {
+      filename = "{{ '/assets/css/skin-daylight.css' | relative_url }}";
     }
     else {
-      filename = "{{ '/assets/css/skin-daylight.css' | relative_url }}";
+      filename = "{{ '/assets/css/skin-midnight.css' | relative_url }}";
     }
     const elem = document.createElement("link");
     elem.setAttribute("rel", "stylesheet");
