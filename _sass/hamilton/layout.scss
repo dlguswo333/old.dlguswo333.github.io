@@ -238,12 +238,18 @@
       overflow: hidden;
       outline: none;
       padding: 0;
+      &.light {
+        background-color: white;
+      }
+      &.dark {
+        background-color: #111;
+      }
       & > svg {
         &.light:hover {
           animation: spin 3s infinite linear forwards;
         }
         &.dark:hover {
-          animation: bounce 3s infinite ease-in-out alternate;
+          animation: bounce 3s infinite linear both;
         }
         &.hide {
           display: none;
@@ -278,13 +284,16 @@
 }
 @keyframes bounce {
   0% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
-  33% {
+  25% {
     transform: translateY(-5px);
   }
-  100% {
+  75% {
     transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
