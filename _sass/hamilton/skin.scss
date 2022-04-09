@@ -60,6 +60,12 @@ table {
   }
 }
 
+kbd {
+  border-color: $border-color-light;
+  background-color: $code-background-color;
+  box-shadow: 0 0 1px $code-background-color inset;
+}
+
 ///////// Layout ///////////
 
 .site-header {
