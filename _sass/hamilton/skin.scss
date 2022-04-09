@@ -173,9 +173,8 @@ ul.post-tags {
 }
 
 .toc-title {
-  color: $background-color;
-  background-color: $border-color-dark;
-  border-color: $border-color;
+  color: $text-color;
+  border-color: $border-color-light;
 }
 
 .toc-nav {
@@ -184,17 +183,15 @@ ul.post-tags {
   ul {
     li a {
       color: $text-color;
-      border-color: $border-color;
+      border-left-color: transparent;
+      border-bottom-color: $border-color-light;
 
       &:hover {
-        background-color: $border-color-dark;
+        background-color: $border-color-light;
       }
       &.active {
-        background-color: $border-color-dark;
+        border-left-color: $link-base-color;
       }
-    }
-    &.toc > li:last-child a {
-      border-bottom: none;
     }
   }
 }

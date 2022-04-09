@@ -354,8 +354,7 @@ ul.social-icons {
 .toc-title {
   text-align: center;
   font-weight: bold;
-  border: 1px solid;
-  border-radius: 0.3em 0.3em 0 0;
+  border-bottom: 1px solid;
   padding: 0.5rem;
   margin: 0;
 }
@@ -363,9 +362,7 @@ ul.social-icons {
 .toc-nav {
   max-height: 70vh;
   overflow-y: auto;
-  border: 1px solid;
   border-top: 0px;
-  border-radius: 0 0 0.3em 0.3em;
 
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
@@ -389,6 +386,7 @@ ul.social-icons {
 
     li a {
       font-weight: bold;
+      border-left: 0.2rem solid;
       border-bottom: 1px solid;
       padding: 0.5rem;
     }
