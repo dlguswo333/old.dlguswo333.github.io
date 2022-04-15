@@ -90,3 +90,29 @@ It also works on Windows Powershell.
 ```bash
 nslookup <domain-name> <DNS-IP-address>
 ```
+
+# lsof
+Get PIDs of listening to specific ports.
+```bash
+sudo lsof -i :<port>
+```
+
+# netstat
+Alternate of `lsof`, `netstat` shows protocol, local/foreign address and state,
+which is more expressive.
+```
+netstat --tcp -p | grep <port>
+```
+Useful flags are:
+- `-n`: Shows numerical addresses instead of symbolic addresses (e.g. *localhost* > *127.0.0.1*)
+- `-p`: Shows PIDs and program names.
+
+# kill
+To kill a process with PID.
+```bash
+kill [-9] <PID>
+```
+Adding `-9` flag will send `SIGKILL` instead of default `SIGTERM` signal,
+while `SIGTERM` is a gentle and able-to-handle signal to terminate a process,
+and `SIGKILL` is a forcible signal and cannot be ignored.<br>
+Check this GNU webpage [link](https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html) for more.
