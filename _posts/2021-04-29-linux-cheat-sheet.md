@@ -106,6 +106,8 @@ netstat --tcp -p | grep <port>
 Useful flags are:
 - `-n`: Shows numerical addresses instead of symbolic addresses (e.g. *localhost* > *127.0.0.1*)
 - `-p`: Shows PIDs and program names.
+- `-l`: Shows only listening sockets.
+- `-a`: Shows both listening and non-listening sockets.
 
 # kill
 To kill a process with PID.
