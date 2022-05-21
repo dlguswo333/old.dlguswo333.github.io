@@ -114,6 +114,27 @@ Set-PSReadlineOption -Colors @{type = "Red"}
 Set-PSReadLineOption -Colors @{Parameter = "Red"}
 {% endhighlight %}
 
+## 4. ⚠️ Powershell Module Deprecated!
+**oh-my-posh** Powershell module has been deprecated as of 05/21/2022!<br>
+But don't worry, the deprecation is not about the whole application,
+but the Powershell module.
+
+They say the Powershell module is just a wrapper around an executable,
+and we can migrate to another installation method following their instructions.
+[link](https://ohmyposh.dev/docs/migrating)
+
+Put simply, if you have installed oh-my-posh using `Install-Module` command
+as I had stated above, then
+
+1. uninstall the module,
+1. delete `Import-Module oh-my-posh` line from your `$PROFILE`,
+1. Install `oh-my-posh` in different way, such as `winget`,
+1. And call `oh-my-posh` command from your `$PROFILE` to set posh prompt if you need.<br>
+  I use<br>
+  `oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\hotstick.minimal.omp.json" | Invoke-Expression`<br>
+  to decorate as `hotstick.minimal` theme.
+
+
 # 3. References
 1. <https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup#set-up-powerline-in-wsl-ubuntu>
 2. <https://ohmyposh.dev/>
