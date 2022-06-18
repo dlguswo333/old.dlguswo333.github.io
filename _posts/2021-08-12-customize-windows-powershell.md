@@ -54,15 +54,25 @@ I will explain it later in this post.
 <br>
 
 ## 2. Install Modules
-Execute Powershell, and type the following commands.
+Execute Powershell, and type the following command.
 <br>
 
 ```powershell
 Install-Module posh-git -Scope CurrentUser
-Install-Module oh-my-posh -Scope CurrentUser
 ```
 
-The commands install two modules.<br>
+And to install oh-my-posh, use Window's apt-like package manager `winget`.
+
+```shell
+winget install JanDeDobbeleer.OhMyPosh
+```
+
+> Or go to their [webpage](https://ohmyposh.dev/docs/installation/windows)
+> to see other installation methods.<br>
+> They have deprecated installing oh-my-posh with `Install-Module` Powershell command
+> as with the Powershell *wrapper* module.
+
+That will install two modules.<br>
 [**posh-git**](https://github.com/dahlbyk/posh-git) is a module which shows
 the current working branch and status, and provides Git auto complete features.<br>
 [**oh-my-posh**](https://ohmyposh.dev/) provides powerline theme features on Powershell prompts.
