@@ -22,8 +22,8 @@ PR까지 날려버리는 참사가 발생하곤 합니다.
 
 커밋이나 PR을 날리기 전 다시 한 번 확인하는 습관을 들이는게
 쉽지만은 않습니다. 이러한 주요 브랜치들에 대한 커밋과 PR을 막는 방법은
-Git Hook 등을 포함한 방법들이 있지만, vscode v1.68 버전에서
-([vscode-release-note]) Branch Protection 기능이 추가되어 간단하게 커밋을 방지할 수 있습니다.
+Git Hook 등을 포함한 방법들이 있지만, vscode [v1.68 버전][vscode-release-note-1.68]에서
+Branch Protection 기능이 추가되어 간단하게 커밋을 방지할 수 있습니다.
 
 vscode 설정에 들어가 `Git: Branch Protection`을 검색합니다.
 `Add Item` 버튼으로 보호하고 싶은 branch 이름을 추가합니다.
@@ -41,4 +41,9 @@ vscode의 Source Control 탭을 통해 커밋을 시도하면 아래와 같은
 안타깝게도 vscode 터미널에서 커밋하는 것까지는 방지하지 못합니다.
 추후에 업데이트로 vscode 터미널에서도 해당 기능이 동작했으면 좋겠네요.
 
-[vscode-release-note]: https://code.visualstudio.com/updates/v1_68#_git-branch-protection
+추가로 [v1.69 버전][vscode-release-note-1.69] 업데이트로 보호되고 있는 브랜치는 이름 옆에 작은 자물쇠 아이콘이 보입니다.
+
+![v1.69 lock icon](https://code.visualstudio.com/assets/updates/1_69/scm-branch-protection-statusbar.png)
+
+[vscode-release-note-1.68]: https://code.visualstudio.com/updates/v1_68#_git-branch-protection
+[vscode-release-note-1.69]: https://code.visualstudio.com/updates/v1_69#_branch-protection-indicators

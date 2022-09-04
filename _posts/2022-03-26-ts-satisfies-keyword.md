@@ -129,7 +129,11 @@ Now we have both strict type checking and autocompletion. :)
 
 However, this solution is a little bit tedious.
 Luckily, Typescript is going to introduce `satisfies` keyword
-in the near future, maybe in `4.7` version.
+in the near future, ~~maybe in `4.7` version.~~
+
+> ⚠️ 09/04/2022 Update<br>
+> `satisfies` keyword PR finally got merged in main brnach ([PR link](https://github.com/microsoft/TypeScript/pull/46827))
+> and is expected to be released in `4.9` version. Check their [iteration plan](https://github.com/microsoft/TypeScript/issues/50457) for more information.
 
 ```ts
 type SMARTPHONE_MAP_TYPE = {[key: string]: {displaySize: number, weight: string}}
@@ -140,5 +144,5 @@ const SMARTPHONE_MAPPING = {
 } satisfies SMARTPHONE_MAP_TYPE;
 ```
 
-Check out the related Github issue on Typescript repository for more!
+Check out the related Github issue on Typescript repository for more.
 [[Link]](https://github.com/microsoft/TypeScript/issues/47920)
