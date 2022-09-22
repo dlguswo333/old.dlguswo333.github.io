@@ -127,7 +127,7 @@ not `SMARTPHONE_MAP_TYPE`, the returned value has information what is inside its
 
 Now we have both strict type checking and autocompletion. :)
 
-However, this solution is a little bit tedious.
+However, this solution is a little bit tedious with **runtime overhead** due to `asType` function calls.
 Luckily, Typescript is going to introduce `satisfies` keyword
 in the near future, ~~maybe in `4.7` version.~~
 
