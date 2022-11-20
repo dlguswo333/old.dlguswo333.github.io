@@ -186,6 +186,16 @@ ul.post-tags {
 .toc-nav {
   border-color: $border-color;
 
+  &::-webkit-scrollbar {
+    background-color: $background-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $border-color;
+    &:hover {
+      background-color: $text-color-light;
+    }
+  }
+
   ul {
     li a {
       color: $text-color;

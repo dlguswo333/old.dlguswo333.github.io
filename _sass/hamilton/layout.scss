@@ -368,6 +368,10 @@ ul.social-icons {
       -ms-hyphens: auto;
           hyphens: auto;
 
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
   ul {
     margin: 0;
     padding: 0;
