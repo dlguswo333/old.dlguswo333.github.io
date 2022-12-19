@@ -118,3 +118,11 @@ Adding `-9` flag will send `SIGKILL` instead of default `SIGTERM` signal,
 while `SIGTERM` is a gentle and able-to-handle signal to terminate a process,
 and `SIGKILL` is a forcible signal and cannot be ignored.<br>
 Check this GNU webpage [link](https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html) for more.
+
+# file
+It determines each given file type and shows the information.
+```shell
+file 404.html placeholder.mp4
+$ 404.html:  HTML document, ASCII text
+$ placeholder.mp4:  ISO Media, MP4 Base Media v1 [ISO 14496-12:2003
+```
