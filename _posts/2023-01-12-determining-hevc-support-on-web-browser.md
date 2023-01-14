@@ -3,7 +3,7 @@ layout: post
 toc: true
 title: "Determining HEVC (H.265) Support On Web Browser"
 categories: ["Programming"]
-tags: ["Web", "JavaScript"]
+tags: [web, javascript]
 author:
   - 이현재
 ---
