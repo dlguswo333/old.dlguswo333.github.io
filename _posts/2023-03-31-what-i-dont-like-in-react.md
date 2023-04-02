@@ -45,12 +45,12 @@ export default function App() {
 }
 ```
 
-Conside the above example component.
+Consider the above example component.
 You might expect clicking the button will set the state to `2`,
 since you are calling the setter twice incrementing by `1`.
-But `number`, inside function `App` is from a snapshot.
-It represent the same value from the same snapshot
-no matter how many times you reference the state.
+But `number` variable, inside function `App` is from a snapshot.
+It represents the same value from the same snapshot
+no matter where or how you reference the state.
 Basically the click callback is same as:
 
 ```jsx
@@ -62,7 +62,7 @@ This is so famous among React developers that even React's brand new
 official documents include a section for this: <https://react.dev/learn/state-as-a-snapshot>
 
 Without knowing this property of React, new React developers might get confused
-why it does not work as they intended.
+why it does not work the way they intended.
 But I think this is not that bad, since it is fair and justice.
 Functional component is also a JavaScript function.
 A variable does not change as long as you do not directly assign to the variable (`number +=1`).
@@ -74,6 +74,8 @@ React executes the function with parameter set to the latest state value,
 thus letting you get the latest value inside the callback function.
 This _updater function_ pattern is useful if you want the latest value.
 
+>https://react.dev/reference/react/useState#updating-state-based-on-the-previous-state
+
 ```jsx
   setNumber(num => num + 1);
   setNumber(num => num + 1);
@@ -81,7 +83,7 @@ This _updater function_ pattern is useful if you want the latest value.
 
 # States are Updated Asynchronously
 In React, states are not updated immediately, but asynchronously.
-This is for performance not to rerender too many times,
+This is for performance not to re-render too many times,
 but it gives programmers too much frustration.
 
 ```jsx
@@ -109,12 +111,12 @@ export default function App() {
 
 
 The above is an example of showing states are updated asynchronously.
-I place mouse cursor on the first div, and then move it onto the second div.
+Place mouse cursor on the first div, and then move it onto the second div.
 What will happen? Upon the mouse leaving the first div,
 `setDidMouseLeave(true)` will be fired.
 Right after that, `didMouseLeave && setState('YES!')` will be fired immediately,
 right? Since those divs are adjacent to each other.
-Since `didMouseLeave` is just updated to `true`, `state` will be updated.
+As `didMouseLeave` is just updated to `true`, `state` will be updated.
 
 ![]()
 
@@ -123,20 +125,20 @@ we did not consider asynchronous state updates in React.
 
 In previous section, I explained that states inside components are from a snapshot,
 and it also applies here in this example.
-React does not update states immediately, thus not rerender immediately for performance.
-`didMouseLeave` state is `false` when `onMouseEnter` callback is fired.
+React does not update states immediately, thus does not re-render immediately.
 We expected things would go like this:
 1. `onMouseLeave` fires, and the state got a update.
-2. Component rerenders.
+2. Component re-renders.
 3. `onMouseEnter` fires, and since `didMouseLeave` is updated, `setState(true)` is called.
 
 But actually things go like this:
 1. `onMouseLeave` fires, and the state got a update.
-2. `onMouseEnter` fires, and `didMouseLeave` is updated, but the component did not rerender yet.
+2. `onMouseEnter` fires, and `didMouseLeave` is updated, but the component did not re-render yet.
   `didMouseLeave` is still `false` in the snapshot, thus `setState(true)` is not called.
-3. `App` rerenders, new snapshot has arrived, now `didMouseLeave` is `true`,
+3. `App` re-renders, new snapshot has arrived, now `didMouseLeave` is `true`,
   but `mouseenter` event does not fire again.
 
+`didMouseLeave` state is `false` inside `onMouseEnter` callback.
 Things will be much more clear if we add bunch of console logs in the component.
 
 ```jsx
@@ -172,13 +174,14 @@ export default function App() {
 Then how can we solve this? To my best knowledge,
 There is no reliable way to solve this problem,
 where you have two different callbacks that one sets a state
-and the other consumes the lastest state value.
+and the other consumes the lastest state value right away.
 
-This kind of things are pretty much frustrating and not easy to understand
+This kind of things is pretty much frustrating and not easy to understand
 why things work this way.
 _"Why has it not been updated? Did I do something wrong?"_
 Futhermore, this is also absurd that there is no easy way to solve this problem.
 However, I tried to find solutions to this problem.
+Some of the following do not work, and can not work in the future.
 
 ## updater function
 I thought the code would work:
@@ -205,16 +208,49 @@ asynchronously after the `onMouseEnter` has finished.
 
 ![]()
 
-It might have something to do with performance.
+I assume it might have something to do with performance.
 While executing event callbacks, React does not execute updater functions
 to focus solely on handling events. After all the handlers finish,
-React calls updater functions for next rerender.
+React calls updater functions for next re-render.
 I don't know. It's all my guess.
 
+## `useRef`
+Use `useRef` to save `didMouseLeave`.
+But be aware that `ref` change does not incur re-render.
+
+>When you change the ref.current property, React does not re-render your component. React is not aware of when you change it because a ref is a plain JavaScript object.<br>
+><https://react.dev/reference/react/useRef#caveats>
+
+```jsx
+import { useState, useRef } from 'react';
+
+export default function App() {
+  const didMouseLeave = useRef(false);
+  const [state, setState] = useState('no');
+
+  const onMouseLeave = () => {
+    didMouseLeave.current = true;
+  }
+  const onMouseEnter = () => {
+    didMouseLeave.current && setState('YES!');
+  }
+
+  return <>
+    <div onMouseLeave={onMouseLeave} style={{backgroundColor: 'yellow'}}>
+      didMouseLeave: {didMouseLeave.current ? 'true' : 'false'}
+    </div>
+    <div onMouseEnter={onMouseEnter} style={{backgroundColor: 'orange'}}>
+      state: {state}
+    </div>
+  </>;
+}
+```
 
 ## `recoil`
 If you use `recoil`, at least in `^0.7.x` versions,
 updater functions execute synchronously unlike React states.
+But be aware that I could not find any documentation for this
+thus **this behavior may change on future releases**.
 
 ```jsx
   const [didMouseLeave, setDidMouseLeave] = useRecoilState(mouseLeaveAtom);
@@ -232,3 +268,24 @@ updater functions execute synchronously unlike React states.
 ```
 
 ![]()
+
+# Other SPA Tools
+## Svelte
+Svelte just works out of the box.
+
+```svelte
+<script>
+	let didMouseLeave = false;
+	let state = 'no';
+
+	const onMouseLeave = () => {didMouseLeave = true};
+	const onMouseEnter = () => {didMouseLeave && (state = 'YES!')};
+</script>
+
+<div on:mouseleave={onMouseLeave} style:background-color='yellow'>
+	didMouseLeave: {didMouseLeave}
+</div>
+<div on:mouseenter={onMouseEnter} style:background-color='orange'>
+	state: {state}
+</div>
+```
