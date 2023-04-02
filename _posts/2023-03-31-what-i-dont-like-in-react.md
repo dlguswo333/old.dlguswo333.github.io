@@ -65,7 +65,7 @@ Without knowing this property of React, new React developers might get confused
 why it does not work the way they intended.
 But I think this is not that bad, since it is fair and justice.
 Functional component is also a JavaScript function.
-A variable does not change as long as you do not directly assign to the variable (`number +=1`).
+A variable does not change as long as you do not directly assign to the variable (`number += 1`).
 And we **don't do that** in React.
 This might be confusing, but once you understand this, you will get used to it.
 
@@ -107,9 +107,6 @@ export default function App() {
 }
 ```
 
-![]()
-
-
 The above is an example of showing states are updated asynchronously.
 Place mouse cursor on the first div, and then move it onto the second div.
 What will happen? Upon the mouse leaving the first div,
@@ -118,7 +115,7 @@ Right after that, `didMouseLeave && setState('YES!')` will be fired immediately,
 right? Since those divs are adjacent to each other.
 As `didMouseLeave` is just updated to `true`, `state` will be updated.
 
-![]()
+![example-not-work](/img/2023-03-31-what-i-dont-like-in-react/example-not-work.gif)
 
 No, it does not work that way. There is no flaw in our strategy except that
 we did not consider asynchronous state updates in React.
@@ -169,7 +166,7 @@ export default function App() {
 }
 ```
 
-![]()
+![react-states-update-async](/img/2023-03-31-what-i-dont-like-in-react/react-states-update-async.gif)
 
 Then how can we solve this? To my best knowledge,
 There is no reliable way to solve this problem,
@@ -201,12 +198,12 @@ I thought the code would work:
 
 The updater function returns the value as it is,
 and a local variable `_didMouseLeave` gets the latest value.
-And we use that latest value for the rest of `onMouseEnter` callback.
+And we use that variable for the rest of `onMouseEnter` callback.
 
 But it does not work since the updater function executes
 asynchronously after the `onMouseEnter` has finished.
 
-![]()
+![updater-function-not-work](/img/2023-03-31-what-i-dont-like-in-react/updater-function-not-work.gif)
 
 I assume it might have something to do with performance.
 While executing event callbacks, React does not execute updater functions
@@ -216,7 +213,7 @@ I don't know. It's all my guess.
 
 ## `useRef`
 Use `useRef` to save `didMouseLeave`.
-But be aware that `ref` change does not incur re-render.
+But be aware that `ref` changes do not incur re-render.
 
 >When you change the ref.current property, React does not re-render your component. React is not aware of when you change it because a ref is a plain JavaScript object.<br>
 ><https://react.dev/reference/react/useRef#caveats>
@@ -246,6 +243,8 @@ export default function App() {
 }
 ```
 
+<!-- TODO Add flushSync -->
+
 ## `recoil`
 If you use `recoil`, at least in `^0.7.x` versions,
 updater functions execute synchronously unlike React states.
@@ -267,9 +266,11 @@ thus **this behavior may change on future releases**.
   }
 ```
 
-![]()
+![recoil-updater-function-works](/img/2023-03-31-what-i-dont-like-in-react/recoil-updater-function-works.gif)
 
 # Other SPA Tools
+In this section, I compare other SPA frameworks/libraries with the specific example component.
+
 ## Svelte
 Svelte just works out of the box.
 
