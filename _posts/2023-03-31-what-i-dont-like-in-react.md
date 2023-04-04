@@ -243,6 +243,43 @@ export default function App() {
 }
 ```
 
+But the above does not 100% resemble the original component.
+The original component re-render upon solely on first div `mouseleave` event.
+This component, does not.
+To replicate the original component, we need one `useState` and one `useRef`
+to save **the same state**.
+
+```jsx
+import { useState, useRef } from 'react';
+
+export default function App() {
+  const didMouseLeaveRef = useRef(false);
+  const [didMouseLeave, setDidMouseLeave] = useState(didMouseLeaveRef.current);
+  const [state, setState] = useState('no');
+
+  const onMouseLeave = () => {
+    didMouseLeave.current = true;
+    setDidMouseLeave(didMouseLeave.current);
+  }
+  const onMouseEnter = () => {
+    didMouseLeave.current && setState('YES!');
+  }
+
+  return <>
+    <div onMouseLeave={onMouseLeave} style={{backgroundColor: 'yellow'}}>
+      didMouseLeave: {didMouseLeave.current ? 'true' : 'false'}
+    </div>
+    <div onMouseEnter={onMouseEnter} style={{backgroundColor: 'orange'}}>
+      state: {state}
+    </div>
+  </>;
+}
+```
+
+...I really don't like it.<br>
+Maybe defining a custom hook that has an `useState` and an `useRef`
+could be a good idea to recycle and refactor the code.
+
 <!-- TODO Add flushSync -->
 
 ## `recoil`
@@ -268,10 +305,10 @@ thus **this behavior may change on future releases**.
 
 ![recoil-updater-function-works](/img/2023-03-31-what-i-dont-like-in-react/recoil-updater-function-works.gif)
 
-# Other SPA Tools
+## Other SPA Tools
 In this section, I compare other SPA frameworks/libraries with the specific example component.
 
-## Svelte
+### Svelte
 Svelte just works out of the box.
 
 ```svelte
