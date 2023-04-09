@@ -86,7 +86,7 @@ In React, states are not updated immediately, but asynchronously.
 This is for performance not to re-render too many times,
 but it gives programmers too much frustration.
 
-<!-- NOTE jekyll cannot handle '{{' properly. Thus escape with raw tag. -->
+<!-- NOTE jekyll cannot handle double braces properly. Thus escape with raw tag. -->
 {% raw %}
 ```jsx
 import { useState } from 'react';
