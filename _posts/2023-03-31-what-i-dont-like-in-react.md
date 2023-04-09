@@ -327,3 +327,38 @@ Svelte just works out of the box.
 	state: {state}
 </div>
 ```
+
+### SolidJS
+SolidJS is a SPA framework and it has react-like grammars and syntax but
+does not have virtual DOM, or asynchronous updates (though you can if you want).
+React developers may easily understand SolidJS code without learning it.
+SolidJS works out of the box.
+
+```jsx
+function Counter() {
+  const [didMouseLeave, setDidMouseLeave] = createSignal(false);
+  const [state, setState] = createSignal('no');
+
+  const onMouseLeave = () => {
+    setDidMouseLeave(true);
+  }
+  const onMouseEnter = () => {
+    didMouseLeave() && setState('YES!');
+  }
+
+  return <>
+    <div onMouseLeave={onMouseLeave} style={{'background-color': 'yellow'}}>
+      didMouseLeave: {didMouseLeave() ? 'true' : 'false'}
+    </div>
+    <div onMouseEnter={onMouseEnter} style={{'background-color': 'orange'}}>
+      state: {state()}
+    </div>
+  </>;
+}
+```
+
+SolidJS gurantees its granular render/update in its own document.
+>Solid's reactivity is synchronous which means, by the next line after any change,
+>the DOM will have updated. And for the most part this is perfectly fine,
+>as Solid's granular rendering is just a propagation of the update in the reactive system.
+><https://www.solidjs.com/tutorial/reactivity_batch>
